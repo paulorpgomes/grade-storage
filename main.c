@@ -78,7 +78,7 @@ void Media(Candidato candidatos[], int n) {
 void MostrarCandidatos(Candidato candidatos[], int n) {
     printf("=== Listagem de Candidatos ===\n");
     for (int i = 0; i < n; i++) {
-        printf("Candidato %d - Notas: %.2f %.2f %.2f %.2f - Media: %.2f - Situacao: %s\n",
+        printf("Candidato %d - Notas: Portugues:%.2f Matematica:%.2f Ingles:%.2f Computacao:%.2f - Media: %.2f - Situacao: %s\n",
                i + 1, candidatos[i].portugues, candidatos[i].matematica, candidatos[i].ingles,
                candidatos[i].computacao, candidatos[i].media, candidatos[i].status);
     }
@@ -88,9 +88,16 @@ int main() {
     Candidato candidatos[MAX_CANDIDATOS];
     int numCandidatos, opcao;
 
-    printf("Digite o numero de candidatos (limite 1000): ");
+    while (1) {
+
+     printf("Digite o numero de candidatos (limite 1000): ");
     scanf("%d", &numCandidatos);
 
+    if(numCandidatos<=MAX_CANDIDATOS){
+        break;
+    }
+        printf("Valor Invalido. Digite novamente!\n");
+    }
     while (1) {
         printf("=== Menu ===\n");
         printf("1) Entrada de Dados\n");
@@ -114,11 +121,9 @@ int main() {
                 printf("Saindo...\n");
                 return 0;
             default:
-                printf("Opção inválida. Tente novamente.\n");
+                printf("Opcao invalida. Tente novamente.\n");
         }
     }
 
     return 0;
 }
-
-
