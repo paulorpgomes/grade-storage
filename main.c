@@ -17,31 +17,31 @@ void DadosCandidato(Candidato candidatos[], int n) {
         printf("Candidato %d\n", i + 1);
         printf("Nota de Portugues: ");
         scanf("%f", &candidatos[i].portugues);
-         if (candidatos[i].portugues < 0 || candidatos[i].portugues > 10) {
+         while(candidatos[i].portugues < 0 || candidatos[i].portugues > 10) {
              printf("Erro: A nota deve estar entre 0 e 10.\n");
-             i--;
-             continue;
+             printf("Nota de Portugues: ");
+             scanf("%f", &candidatos[i].portugues);
              }
         printf("Nota de Matematica: ");
         scanf("%f", &candidatos[i].matematica);
-        if (candidatos[i].matematica < 0 || candidatos[i].matematica > 10) {
+        while(candidatos[i].matematica < 0 || candidatos[i].matematica > 10) {
              printf("Erro: A nota deve estar entre 0 e 10.\n");
-             i--;
-             continue;
+             printf("Nota de Matematica: ");
+            scanf("%f", &candidatos[i].matematica);
              }
         printf("Nota de Ingles: ");
         scanf("%f", &candidatos[i].ingles);
-        if (candidatos[i].ingles < 0 || candidatos[i].ingles > 10) {
+        while(candidatos[i].ingles < 0 || candidatos[i].ingles > 10) {
              printf("Erro: A nota deve estar entre 0 e 10.\n");
-             i--;
-             continue;
+             printf("Nota de Ingles: ");
+             scanf("%f", &candidatos[i].ingles);
              }
         printf("Nota de Computacao: ");
         scanf("%f", &candidatos[i].computacao);
         if (candidatos[i].computacao < 0 || candidatos[i].computacao > 10) {
              printf("Erro: A nota deve estar entre 0 e 10.\n");
-             i--;
-             continue;
+             printf("Nota de Computacao: ");
+             scanf("%f", &candidatos[i].computacao);
              }
         candidatos[i].media = candidatos[i].portugues * 0.4 +
                                 candidatos[i].matematica * 0.3 +
