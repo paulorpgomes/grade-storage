@@ -38,7 +38,7 @@ void DadosCandidato(Candidato candidatos[], int n) {
              }
         printf("Nota de Computacao: ");
         scanf("%f", &candidatos[i].computacao);
-        if (candidatos[i].computacao < 0 || candidatos[i].computacao > 10) {
+        while(candidatos[i].computacao < 0 || candidatos[i].computacao > 10) {
              printf("Erro: A nota deve estar entre 0 e 10.\n");
              printf("Nota de Computacao: ");
              scanf("%f", &candidatos[i].computacao);
